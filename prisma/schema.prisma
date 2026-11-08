@@ -1,0 +1,153 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+// The connection string lives in prisma.config.ts for Migrate and reaches the
+// client at runtime through @prisma/adapter-pg (src/server/db/prisma.ts).
+datasource db {
+  provider = "postgresql"
+}
+
+enum Availability {
+  IN_STOCK
+  PREBOOK
+  OUT_OF_STOCK
+}
+
+enum OrderStatus {
+  NEW
+  CONFIRMED
+  SHIPPED
+  DELIVERED
+  CANCELLED
+}
+
+model Product {
+  id            String       @id @default(cuid())
+  /// Bangla is required; English is optional and falls back to Bangla.
+  name          String
+  nameEn        String?
+  slug          String       @unique
+  /// One of the codes in src/constants/catalog.ts.
+  category      String       @default("OTHER")
+  packSize      Float
+  /// g, kg, ml, l or piece. Labels live in messages/*.json.
+  packUnit      String
+  /// Whole taka.
+  price         Int
+  comparePrice  Int?
+  description   String       @default("")
+  descriptionEn String?
+  availability  Availability @default(IN_STOCK)
+  isPublished   Boolean      @default(true)
+  isFeatured    Boolean      @default(false)
+  sortOrder     Int          @default(0)
+  createdAt     DateTime     @default(now())
+  updatedAt     DateTime     @updatedAt
+
+  images     ProductImage[]
+  orderItems OrderItem[]
+
+  @@index([isPublished, sortOrder])
+}
+
+model ProductImage {
+  id        String  @id @default(cuid())
+  productId String
+  product   Product @relation(fields: [productId], references: [id], onDelete: Cascade)
+  url       String
+  publicId  String
+  width     Int
+  height    Int
+  position  Int     @default(0)
+
+  @@index([productId, position])
+}
+
+model Order {
+  id             String      @id @default(cuid())
+  /// Shown to people as RK-1001. The sequence starts at 1001 (see the init migration).
+  orderNo        Int         @unique @default(autoincrement())
+  /// Random; the only way to open the order success page.
+  publicToken    String      @unique
+  /// One per checkout attempt, so a retry or double tap cannot create a second order.
+  idempotencyKey String      @unique
+  customerName   String
+  customerPhone  String
+  address        String
+  customerNote   String?
+  locale         String      @default("bn")
+  deliveryLabel  String
+  deliveryLabelEn String?
+  deliveryCharge Int
+  subtotal       Int
+  total          Int
+  paymentMethod  String      @default("COD")
+  status         OrderStatus @default(NEW)
+  adminNote      String?
+  ip             String?
+  createdAt      DateTime    @default(now())
+  updatedAt      DateTime    @updatedAt
+
+  items OrderItem[]
+
+  @@index([status, createdAt])
+  @@index([customerPhone, createdAt])
+}
+
+/// A snapshot, so editing or deleting a product never changes an old order.
+model OrderItem {
+  id            String   @id @default(cuid())
+  orderId       String
+  order         Order    @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  productId     String?
+  product       Product? @relation(fields: [productId], references: [id], onDelete: SetNull)
+  productName   String
+  productNameEn String?
+  packSize      Float
+  packUnit      String
+  unitPrice     Int
+  quantity      Int
+  lineTotal     Int
+  imageUrl      String?
+  wasPrebook    Boolean  @default(false)
+
+  @@index([orderId])
+}
+
+/// Exactly one row (id = 1).
+model StoreSetting {
+  id              Int      @id @default(1)
+  phone           String
+  whatsapp        String
+  facebookUrl     String
+  address         String
+  addressEn       String?
+  announcement    String?
+  announcementEn  String?
+  prebookNote     String?
+  prebookNoteEn   String?
+  notifyEmail     String?
+  /// [{ id, label, labelEn, charge }]
+  deliveryOptions Json     @default("[]")
+  updatedAt       DateTime @updatedAt
+}
+
+model Admin {
+  id           String   @id @default(cuid())
+  name         String
+  email        String   @unique
+  passwordHash String
+  /// Bumped on password change, which signs out every device.
+  tokenVersion Int      @default(0)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+model RateLimit {
+  key       String   @id
+  count     Int
+  windowEnd DateTime
+
+  @@index([windowEnd])
+}

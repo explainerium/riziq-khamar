@@ -1,0 +1,409 @@
+{
+  "metadata": {
+    "title": "Riziq Khamar: pure date-palm gur, honey and mustard oil",
+    "siteName": "Riziq Khamar",
+    "description": "Pure date-palm gur, honey and mustard oil from Tarash, Sirajganj. Order online and pay on delivery."
+  },
+  "common": {
+    "brand": "Riziq Khamar",
+    "brandAlt": "রিজিক খামার",
+    "tagline": "Pure, natural, traditional",
+    "working": "Please wait",
+    "stillWorking": "Taking a little longer",
+    "select": "Choose",
+    "retry": "Try again",
+    "error": "This page did not load. Try again.",
+    "call": "Call us",
+    "whatsapp": "WhatsApp",
+    "facebook": "Facebook"
+  },
+  "validation": {
+    "invalid": "This is not valid",
+    "nameRequired": "Enter a name",
+    "phoneInvalid": "Enter a valid mobile number, like 01712345678",
+    "addressRequired": "Enter your full address",
+    "deliveryRequired": "Choose a delivery area",
+    "tooLong": "This is too long",
+    "tooLarge": "This number is too large",
+    "wholeNumber": "Enter a whole number",
+    "priceRequired": "Enter a price",
+    "packSizeRequired": "Enter the amount",
+    "chargeRequired": "Enter a charge (0 if free)",
+    "slugInvalid": "Only lowercase English letters, numbers and hyphens",
+    "tooManyImages": "You can add up to 5 photos",
+    "imageInvalid": "Upload this photo again",
+    "urlInvalid": "Enter a valid link",
+    "emailInvalid": "Enter a valid email",
+    "passwordRequired": "Enter the password",
+    "passwordShort": "Use at least 8 characters"
+  },
+  "api": {
+    "unauthorized": "Sign in again",
+    "notFound": "This is no longer available",
+    "conflict": "This already exists",
+    "invalidJson": "The request did not arrive properly. Try again.",
+    "validationFailed": "Fix the fields marked in red",
+    "serverError": "That did not work. Try again in a moment.",
+    "network": "Check your internet connection and try again",
+    "tooManyLogins": "Too many attempts. Try again in 15 minutes.",
+    "invalidCredentials": "The email or password is wrong",
+    "tooManyOrders": "Too many orders in a short time. Try again soon, or call us.",
+    "orderRejected": "This order could not be taken. Please call us.",
+    "itemsChanged": "An item in your cart is no longer available. Remove it and order again.",
+    "deliveryInvalid": "Choose your delivery area again",
+    "uploadNotConfigured": "Photo upload is not set up yet. Add the Cloudinary details to the .env file.",
+    "wrongPassword": "The current password is wrong"
+  },
+  "availability": {
+    "IN_STOCK": "In stock",
+    "PREBOOK": "Pre-booking",
+    "OUT_OF_STOCK": "Out of stock"
+  },
+  "status": {
+    "NEW": "New",
+    "CONFIRMED": "Confirmed",
+    "SHIPPED": "Sent",
+    "DELIVERED": "Delivered",
+    "CANCELLED": "Cancelled"
+  },
+  "layout": {
+    "nav": {
+      "home": "Home",
+      "products": "Products",
+      "about": "Our story",
+      "policy": "Policies"
+    },
+    "menuOpen": "Open menu",
+    "menuTitle": "Menu",
+    "cartWithCount": "Cart, {count} items",
+    "whatsappFab": "Chat on WhatsApp",
+    "language": {
+      "label": "Language",
+      "short": {
+        "bn": "বাং",
+        "en": "EN"
+      }
+    },
+    "footer": {
+      "links": "Pages",
+      "rights": "© {year} Riziq Khamar"
+    }
+  },
+  "home": {
+    "hero": {
+      "title": "Pure gur from palm sap, straight to your home",
+      "body": "Our date palms grow in Tarash, Sirajganj. We boil the dawn sap into gur ourselves, and also sell honey and mustard oil.",
+      "cta": "See products",
+      "story": "Our story",
+      "imageAlt": "Rows of date palms beside a rice field"
+    },
+    "products": {
+      "title": "Our products",
+      "viewAll": "All products"
+    },
+    "sap": {
+      "title": "From tree to gur",
+      "intro": "Nothing about how our gur is made is hidden. We show every step on video.",
+      "steps": {
+        "cut": {
+          "title": "Trimming the palm",
+          "body": "At the start of winter, the gachi shaves the top of each date palm to open a path for the sap."
+        },
+        "collect": {
+          "title": "Bringing down the sap",
+          "body": "Sap fills a clay pot overnight, and the gachi brings it down at dawn."
+        },
+        "boil": {
+          "title": "Boiling",
+          "body": "The fresh morning sap goes on the fire and slowly thickens."
+        },
+        "make": {
+          "title": "Making gur",
+          "body": "The thick sap becomes jhola, nali and patali gur."
+        }
+      },
+      "end": "Then straight to your home"
+    },
+    "farm": {
+      "title": "A farm of more than 100 date palms",
+      "body": "Our gachis climb before sunrise. Hear from the farm in this video.",
+      "imageAlt": "The farm's founder and a gachi beside the pond",
+      "videoCaption": "From the farm",
+      "videoPlay": "Play video",
+      "more": "Read more about us"
+    },
+    "how": {
+      "title": "How to order",
+      "steps": {
+        "choose": "Choose what you would like",
+        "details": "Give your name, mobile number and address",
+        "receive": "We confirm by phone, and you pay when it arrives"
+      }
+    },
+    "contact": {
+      "title": "Need help with an order?",
+      "body": "Call or WhatsApp us and we will take your order."
+    }
+  },
+  "products": {
+    "title": "Our products",
+    "description": "Order date-palm gur, honey and mustard oil.",
+    "all": "All",
+    "emptyTitle": "Products are coming soon",
+    "emptyBody": "To order now, call or WhatsApp us."
+  },
+  "product": {
+    "addNamed": "Add {name} to cart",
+    "addToCart": "Add to cart",
+    "added": "Added to cart",
+    "orderNow": "Order now",
+    "prebookNow": "Pre-book now",
+    "outOfStock": "This item is out of stock right now. Call us to ask about it.",
+    "increase": "Increase quantity",
+    "decrease": "Decrease quantity",
+    "description": "About this product",
+    "others": "More products"
+  },
+  "checkout": {
+    "title": "Place your order",
+    "itemsTitle": "Your items",
+    "yourDetails": "Your details",
+    "name": "Your name",
+    "phone": "Mobile number",
+    "phonePlaceholder": "01XXXXXXXXX",
+    "address": "Full address",
+    "addressPlaceholder": "House or village, road, thana, district",
+    "note": "Anything to tell us? (optional)",
+    "deliveryArea": "Delivery area",
+    "summary": "Order total",
+    "subtotal": "Items",
+    "delivery": "Delivery charge",
+    "deliveryPick": "Choose an area",
+    "total": "Total",
+    "paymentCod": "Pay when it arrives",
+    "confirm": "Confirm order",
+    "confirming": "Placing your order",
+    "remove": "Remove {name}",
+    "unavailable": "This item is not available right now",
+    "removeUnavailable": "Remove the item that is not available to place your order",
+    "quoteError": "The price could not be shown. Check your internet and try again.",
+    "retry": "Try again",
+    "emptyTitle": "Your cart is empty",
+    "emptyBody": "Choose something you like and order it here.",
+    "emptyCta": "See products"
+  },
+  "order": {
+    "title": "Your order is placed",
+    "number": "Order number",
+    "subtotal": "Items",
+    "delivery": "Delivery",
+    "total": "Total",
+    "nextTitle": "What happens next",
+    "nextBody": "We will call you soon to confirm the order. Pay when it arrives.",
+    "whatsapp": "Tell us on WhatsApp",
+    "whatsappText": "Hello. I placed an order. Order number: {code}",
+    "continue": "See more products"
+  },
+  "about": {
+    "title": "Our story",
+    "lead": "We work with more than 100 date palms in Tarash, Sirajganj, so that pure gur reaches your home this winter.",
+    "bannerAlt": "The farm's vegetables, cows, date palms and gur",
+    "climbAlt": "A gachi climbing a date palm behind the farm's founder",
+    "groveAlt": "A row of date palms beside a rice field",
+    "gachiTitle": "It starts with the gachi",
+    "gachiBody": "Experienced gachis do everything from trimming the palm to bringing down the sap. We boil the dawn sap into gur ourselves.",
+    "openTitle": "All of it in plain sight",
+    "openBody": "We show trimming, collecting, boiling and making gur on video. You can follow along on our Facebook page."
+  },
+  "policy": {
+    "title": "Policies",
+    "delivery": {
+      "title": "Delivery",
+      "body": "Orders go out by courier. You will see the delivery charge for your area when you order. Pre-booked items ship once they are ready, and we call before sending them."
+    },
+    "payment": {
+      "title": "Payment",
+      "body": "Pay the delivery person when your order arrives."
+    },
+    "returns": {
+      "title": "Returns and problems",
+      "body": "Check your order when you receive it. If something is wrong, call us right away."
+    },
+    "privacy": {
+      "title": "Your information",
+      "body": "We take your name, mobile number and address for your order, and use them only to deliver it."
+    }
+  },
+  "notFound": {
+    "title": "Page not found",
+    "description": "The link is wrong, or this page has been removed.",
+    "backHome": "Go to home page"
+  },
+  "admin": {
+    "metadata": {
+      "title": "Dashboard",
+      "overview": "Overview",
+      "orders": "Orders",
+      "products": "Products",
+      "newProduct": "New product",
+      "editProduct": "Edit product",
+      "settings": "Settings",
+      "login": "Sign in"
+    },
+    "nav": {
+      "overview": "Home",
+      "orders": "Orders",
+      "products": "Products",
+      "settings": "Settings",
+      "viewSite": "View site",
+      "logout": "Sign out"
+    },
+    "login": {
+      "title": "Sign in to the dashboard",
+      "email": "Email",
+      "password": "Password",
+      "submit": "Sign in"
+    },
+    "common": {
+      "loadError": "This could not be loaded",
+      "retry": "Try again",
+      "previous": "Previous",
+      "next": "Next",
+      "page": "Page {page} of {pages}",
+      "cancel": "Cancel",
+      "back": "Back"
+    },
+    "overview": {
+      "todayLabel": "Orders today",
+      "todayValue": "Worth {value} today",
+      "lastWeek": "Last 7 days",
+      "chartLabel": "Orders per day, last 7 days",
+      "newOrders": "New orders",
+      "toDeliver": "Still to deliver",
+      "monthSales": "Sales this month",
+      "monthSalesHint": "Delivered orders only",
+      "products": "Products",
+      "recent": "Recent orders",
+      "viewAll": "See all",
+      "noOrders": "No orders yet. They will show up here.",
+      "addFirstTitle": "Add your first product",
+      "addFirstBody": "Once you add a product it appears on the site and orders can start.",
+      "addProduct": "Add product"
+    },
+    "orders": {
+      "title": "Orders",
+      "all": "All",
+      "search": "Name, mobile or order number",
+      "emptyTitle": "No orders found",
+      "emptyBody": "Choose another status or clear the search.",
+      "itemCount": "{count} items",
+      "moreItems": "{first} and {count} more",
+      "prebook": "Pre-book",
+      "call": "Call",
+      "whatsapp": "WhatsApp",
+      "items": "Items",
+      "customer": "Customer",
+      "customerNote": "Customer's note",
+      "delivery": "Delivery",
+      "subtotal": "Items",
+      "total": "Total",
+      "paymentCod": "Cash on delivery",
+      "status": "Status",
+      "statusSaved": "Status changed",
+      "adminNote": "Your note",
+      "adminNotePlaceholder": "Only shown in the dashboard",
+      "saveNote": "Save note",
+      "noteSaved": "Note saved",
+      "language": "Customer's language: {language}"
+    },
+    "products": {
+      "title": "Products",
+      "add": "New product",
+      "emptyTitle": "No products yet",
+      "emptyBody": "Add your first product. It appears on the site right away.",
+      "hidden": "Hidden from site",
+      "availabilityLabel": "Stock status of {name}",
+      "availabilitySaved": "Stock status changed",
+      "newTitle": "New product",
+      "editTitle": "Edit product",
+      "photos": "Photos",
+      "photosHint": "The first photo is the main one. Up to 5.",
+      "addPhoto": "Add photo",
+      "makeMain": "Make main",
+      "main": "Main",
+      "removePhoto": "Remove photo",
+      "uploadFailed": "The photo did not upload. Try again.",
+      "tooManyPhotos": "You can add up to 5 photos",
+      "uploadingWait": "Wait for the photos to finish uploading",
+      "name": "Product name (Bangla)",
+      "namePlaceholder": "For example: পাটালি গুড়",
+      "category": "Type",
+      "packSize": "Amount",
+      "packUnit": "Unit",
+      "price": "Price (taka)",
+      "availability": "Stock status",
+      "description": "Description (Bangla)",
+      "descriptionPlaceholder": "Write about this product",
+      "english": "English (optional)",
+      "englishHint": "If left empty, English pages show the Bangla text",
+      "nameEn": "English name",
+      "descriptionEn": "English description",
+      "more": "More options",
+      "comparePrice": "Old price",
+      "comparePriceHint": "Enter the old price to show a discount",
+      "slug": "Link",
+      "slugHint": "If left empty, it is made from the name",
+      "sortOrder": "Sort order",
+      "sortOrderHint": "Smaller numbers come first",
+      "isPublished": "Show on site",
+      "isPublishedHint": "Turn off to hide this product from the site",
+      "isFeatured": "Show first on home page",
+      "save": "Save",
+      "saved": "Product saved",
+      "created": "Product added",
+      "viewOnSite": "View on site",
+      "delete": "Delete product",
+      "deleteTitle": "Delete this product?",
+      "deleteBody": "The product and its photos will be deleted. Old orders keep their details.",
+      "deleted": "Product deleted"
+    },
+    "settings": {
+      "title": "Settings",
+      "store": "Shop details",
+      "storeHint": "Phone, WhatsApp, Facebook link and address",
+      "noticesHint": "The notice at the top of the site and the pre-booking note",
+      "alertsHint": "Where new orders are sent",
+      "passwordHint": "The password you sign in with",
+      "phone": "Phone number",
+      "whatsapp": "WhatsApp number",
+      "facebookUrl": "Facebook page link",
+      "address": "Address (Bangla)",
+      "addressEn": "Address (English)",
+      "notices": "Notices",
+      "announcement": "Top notice (Bangla)",
+      "announcementHint": "Leave empty to hide the notice",
+      "announcementEn": "Top notice (English)",
+      "prebookNote": "Pre-booking note (Bangla)",
+      "prebookNoteHint": "Shown on pre-booking products and at checkout",
+      "prebookNoteEn": "Pre-booking note (English)",
+      "delivery": "Delivery charges",
+      "deliveryHint": "Customers choose their area from this list when ordering",
+      "optionLabel": "Area (Bangla)",
+      "optionLabelEn": "Area (English)",
+      "optionCharge": "Charge (taka)",
+      "addOption": "Add area",
+      "removeOption": "Remove area",
+      "alerts": "New order alerts",
+      "notifyEmail": "Email",
+      "notifyEmailHint": "New orders are sent to this email",
+      "save": "Save",
+      "saved": "Settings saved",
+      "password": "Change password",
+      "currentPassword": "Current password",
+      "newPassword": "New password",
+      "changePassword": "Change password",
+      "passwordChanged": "Password changed. Other devices have been signed out.",
+      "language": "Dashboard language"
+    }
+  }
+}
