@@ -3,6 +3,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { getLocale, getMessages, getTranslations } from "next-intl/server";
 import { Toaster } from "sonner";
 import { StoreProvider } from "@/components/providers/StoreProvider";
+import { MEDIA } from "@/constants/media";
 import { SITE_URL } from "@/constants/site";
 import { routing } from "@/i18n/routing";
 import { pickMessages, STORE_CLIENT_MESSAGES } from "@/i18n/clientMessages";
@@ -20,10 +21,11 @@ export async function generateMetadata(): Promise<Metadata> {
     metadataBase: new URL(SITE_URL),
     title: { default: t("title"), template: `%s | ${t("siteName")}` },
     description: t("description"),
+    icons: { icon: MEDIA.icon, apple: MEDIA.appleIcon },
     openGraph: {
       type: "website",
       siteName: t("siteName"),
-      images: [{ url: "/brand/og.jpg", width: 1200, height: 630 }],
+      images: [{ url: MEDIA.og, width: 1200, height: 630 }],
     },
   };
 }

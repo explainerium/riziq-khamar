@@ -7,7 +7,7 @@
   "background_color": "#eef4ea",
   "theme_color": "#14432e",
   "icons": [
-    { "src": "/brand/app-icon-192.png", "sizes": "192x192", "type": "image/png" },
-    { "src": "/brand/app-icon-512.png", "sizes": "512x512", "type": "image/png" }
+    { "src": "https://res.cloudinary.com/dbildjokv/image/upload/v1794234674/riziq-khamar/brand/app-icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "https://res.cloudinary.com/dbildjokv/image/upload/v1794234675/riziq-khamar/brand/app-icon-512.png", "sizes": "512x512", "type": "image/png" }
   ]
 }

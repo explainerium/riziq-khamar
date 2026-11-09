@@ -11,7 +11,7 @@ export function ProductGallery({ images, alt }: { images: PublicImage[]; alt: st
   const [active, setActive] = useState(0);
 
   if (images.length === 0) {
-    return <ProductImage url={null} alt={alt} sizes="100vw" className="leaf aspect-[4/5] w-full md:aspect-square" />;
+    return <ProductImage url={null} alt={alt} sizes="100vw" className="leaf aspect-square w-full" />;
   }
 
   return (
@@ -31,7 +31,7 @@ export function ProductGallery({ images, alt }: { images: PublicImage[]; alt: st
               alt={alt}
               sizes="(min-width: 768px) 50vw, 100vw"
               priority={index === 0}
-              className="aspect-[4/5] w-full md:aspect-square"
+              className="aspect-square w-full"
             />
           </div>
         ))}

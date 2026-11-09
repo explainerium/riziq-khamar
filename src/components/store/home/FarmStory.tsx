@@ -1,7 +1,7 @@
-import Image from "next/image";
 import { getTranslations } from "next-intl/server";
-import storyGachi from "@/assets/images/story-gachi.jpg";
+import { CloudImage } from "@/components/shared/CloudImage";
 import { Container } from "@/components/shared/Container";
+import { MEDIA } from "@/constants/media";
 import { Link } from "@/i18n/navigation";
 import { FarmVideo } from "./FarmVideo";
 
@@ -12,12 +12,11 @@ export async function FarmStory() {
     <section className="below-fold py-16 md:py-24">
       <Container className="grid gap-10 md:grid-cols-[minmax(0,7fr)_minmax(0,4fr)] md:items-start md:gap-14">
         <div className="min-w-0">
-          <Image
-            src={storyGachi}
+          <CloudImage
+            url={MEDIA.storyGachi}
             alt={t("imageAlt")}
             sizes="(min-width: 768px) 60vw, 100vw"
-            placeholder="blur"
-            className="leaf aspect-[16/10] w-full object-cover"
+            className="leaf aspect-[16/10] w-full bg-secondary"
           />
           <h2 className="mt-6 text-3xl font-bold text-palm md:text-4xl">{t("title")}</h2>
           <p className="mt-2 max-w-[34em] text-lg text-muted-foreground">{t("body")}</p>

@@ -7,11 +7,6 @@ const nextConfig: NextConfig = {
   cacheComponents: true,
   partialPrefetching: true,
   reactCompiler: true,
-  images: {
-    // AVIF first: the same photo in fewer bytes on phones that can decode it, and most can.
-    formats: ["image/avif", "image/webp"],
-    qualities: [60, 75],
-  },
   // Keep AGENTS.md out of the repo; `next dev` would otherwise create it.
   agentRules: false,
   serverExternalPackages: ["cloudinary"],

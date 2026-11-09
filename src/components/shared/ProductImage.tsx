@@ -1,15 +1,8 @@
 import { Leaf } from "lucide-react";
-import { preconnect } from "react-dom";
 import { cn } from "@/lib/utils";
-import { cloudinaryWidth } from "@/utils/cloudinary";
+import { CloudImage } from "./CloudImage";
 
-const WIDTHS = [240, 360, 480, 640, 800, 1080, 1400];
-
-/**
- * Plain <img> on purpose: Cloudinary already resizes and serves the best format
- * from its CDN, so the browser picks a width from `srcSet` and no JavaScript
- * or second optimizer is involved.
- */
+/** A product's photo, or a quiet leaf when it has none yet. */
 export function ProductImage({
   url,
   alt,
@@ -33,20 +26,5 @@ export function ProductImage({
     );
   }
 
-  // The image that paints first: open the connection early.
-  if (priority) preconnect("https://res.cloudinary.com");
-
-  return (
-    // eslint-disable-next-line @next/next/no-img-element
-    <img
-      src={cloudinaryWidth(url, 640, thrifty)}
-      srcSet={WIDTHS.map((width) => `${cloudinaryWidth(url, width, thrifty)} ${width}w`).join(", ")}
-      sizes={sizes}
-      alt={alt}
-      loading={priority ? "eager" : "lazy"}
-      fetchPriority={priority ? "high" : undefined}
-      decoding="async"
-      className={cn("object-cover", className)}
-    />
-  );
+  return <CloudImage url={url} alt={alt} sizes={sizes} priority={priority} thrifty={thrifty} className={className} />;
 }

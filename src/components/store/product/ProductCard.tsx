@@ -30,10 +30,10 @@ export function ProductCard({ product, priority = false }: { product: PublicProd
         <ProductImage
           url={product.images[0]?.url}
           alt={name}
-          sizes="(min-width: 768px) 25vw, 50vw"
+          sizes="(min-width: 1152px) 261px, (min-width: 768px) 25vw, calc(50vw - 22px)"
           priority={priority}
           thrifty
-          className="leaf aspect-[4/5] w-full"
+          className="leaf aspect-square w-full"
         />
         <AvailabilityPill availability={product.availability} className="absolute top-2.5 left-2.5" />
       </Link>

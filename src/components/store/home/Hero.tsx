@@ -1,8 +1,8 @@
-import Image from "next/image";
 import { getTranslations } from "next-intl/server";
-import heroPalms from "@/assets/images/hero-palms.jpg";
+import { CloudImage } from "@/components/shared/CloudImage";
 import { Container } from "@/components/shared/Container";
 import { Button } from "@/components/ui/button";
+import { MEDIA } from "@/constants/media";
 import { Link } from "@/i18n/navigation";
 
 /**
@@ -16,14 +16,13 @@ export async function Hero() {
   return (
     <section className="relative isolate overflow-hidden bg-linear-to-b from-sky-deep to-sky">
       <div className="absolute inset-x-0 bottom-0 -z-10 h-[62%] mask-[linear-gradient(to_bottom,transparent,black_32%)] md:inset-y-0 md:right-0 md:left-[36%] md:h-full md:mask-[linear-gradient(to_right,transparent,black_30%)]">
-        <Image
-          src={heroPalms}
+        <CloudImage
+          url={MEDIA.heroPalms}
           alt={t("imageAlt")}
-          fill
-          preload
-          fetchPriority="high"
+          priority
+          thrifty
           sizes="(min-width: 768px) 64vw, 100vw"
-          className="object-cover object-[64%_100%] md:object-center"
+          className="absolute inset-0 size-full object-[64%_100%] md:object-center"
         />
       </div>
 
